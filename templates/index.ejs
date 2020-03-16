@@ -1,0 +1,433 @@
+<% var
+pageId = "index";
+%>
+<% include _header %>
+
+<div class="globalHeader
+  is-<%- Global_Header_Color %>">
+  <div class="l-container">
+    <div class="globalHeader-inner">
+      <div class="globalHeader-labelName" style="width:100%">
+        <div href="<%- Circle_URL %>">
+          <div <% if(Circle_Logo!==""){ }else{%> style="display: none"<%}%>>
+            <img class="labelName-logoImg" src="<%- Circle_Logo %>" alt="<%- Circle_Name %>"> </div>
+          <div <% if(Circle_Logo==""){ }else{%> style="display: none"<%}%>><%- Circle_Name %></div>
+      </div>
+        <div class="globalHeader-shareBtns" style="margin-left: auto;<% if(Enable_Share_Buttons!=='1'){%>display: none;<%}%>">
+          <a href="https://twitter.com/share?text=<%- author %> - <%- Production_Title %> - <%- Circle_Name %>&url=<%- page_url %>" class="btn-tw" target="_blank">
+            <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-591 391.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.5-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 2.9 10.1 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.1 3.3-3.4z"/></svg>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=<%- page_url %>" class="btn-fb" target="_blank">
+            <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-605 417h-6v-16h-4v-5.5h4v-3.2c0-4.5 1.2-7.2 6.5-7.2h4.4v5.5h-2.8c-2.1 0-2.2.8-2.2 2.2v2.8h5l-.6 5.5h-4.4l.1 15.9z"/></svg>
+          </a>
+          <a href="http://service.weibo.com/share/share.php?url=<%- page_url %>" class="btn-fb" target="_blank"><img src="./images/social_media/weibo.png" alt="weibo" width="42" height="42"></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="heroHeader">
+  <div class="heroHeader-inner
+  is-position-<%- Header_Title_Logo_Position %>
+  <% if(HeaderImage!==""){%>has-headerImage<%}else{}%>
+  " style="background-image: url('<%- HeaderImage %>');">
+    <header class="header">
+      <div class="l-container" <% if(Title_Logo==""){%>style="display: none"<%}%>>
+        <h1>
+            <img class="header-logo" src="<%- Title_Logo %>" alt="<%- Production_Title %>">
+        </h1>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+<section class="l-section section-introduction" <% if(Intro_Heading_Image=="" && Introduction_Heading==""){%> style="display: none"<%}%>>
+  <div class="l-container">
+      <header class="section-header">
+        <h2>
+            <img class="introduction-heading-image" src="<%- Intro_Heading_Image%>" alt="<%- Introduction_Heading %>" style="<% if(Intro_Heading_Image==""){ %>display: none;<%}%> width: <%- Introduction_Heading_Image_Width %>px;">
+
+          <div <% if(Intro_Heading_Image=="" && Introduction_Heading==""){ }else{%> style="display: none"<%}%>>
+            <%- Introduction_Heading %>
+          </div>
+        </h2>
+      </header>
+
+    <div class="section-content" <% if(Introduction_Text==""){%> style="display: none"<%}%>>
+      <p>
+        <%- Introduction_Text %>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!--用网易云是因为虾米播播太旧了...-->
+  <section class="l-section section-netease" <% if(Netease_Song_ID==""){%> style="display: none"<%}%>>
+    <div class="l-container">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=150 src="//music.163.com/outchain/player?type=2&id=<%- Netease_Song_ID  %>&auto=0"></iframe>
+    </div>
+  </section>
+
+  <!--soundcloud-->
+  <!--soundcloud需要自己手动获取嵌入式代码里面的歌曲ID-->
+  <section class="l-section section-soundcloud" <% if(Soundcloud_Embed_Code==""){%> style="display: none"<%}%>>
+    <div class="l-container">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%- Soundcloud_Embed_Code %>&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+    </div>
+  </section>
+
+
+<section class="l-section section-spec">
+  <div class="l-container">
+    <div class="l-row">
+      <div class="l-span5">
+          <img src="<%- Jacket %>" alt="<%- Production_Title %>" class="jacket-image" <% if(Jacket==""){%> style="display: none"<%}%>>
+          <div class="jacket-noimage" <% if(Jacket!==""){%> style="display: none"<%}%>>
+              <% switch(Language){
+                  case "cn": %>
+              作品印刷中~
+              <%  break; case "en": %>
+              NOW PRINTING
+              <%  break; case "jp": %>
+              タイトル
+              <%  break; }%>
+          </div>
+      </div>
+      <div class="l-span7">
+        <dl class="spec-dl">
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                          作品标题
+                  <%  break; case "en": %>
+                          TITLE
+                  <%  break; case "jp": %>
+                          タイトル
+                  <%break; }%>
+              </span></dt>
+          <dd><%- Production_Title %></dd>
+
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                  出品方
+                  <%  break; case "en": %>
+                  CIRCLE
+                  <%  break; case "jp": %>
+                  タイトル
+                  <%  break; }%>
+              </span></dt>
+          <dd><a href="<%- Circle_URL %>"><%- Circle_Name %></a></dd>
+
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                  规格
+                  <%  break; case "en": %>
+                  SPECIFICATION
+                  <%  break; case "jp": %>
+                  仕様
+                  <% break; }%>
+              </span></dt>
+          <dd>Spec</dd>
+
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                  发行时间
+                  <%  break; case "en": %>
+                  RELEASE DATE
+                  <%  break; case "jp": %>
+                  発売日
+                  <%  break;}%>
+              </span></dt>
+          <dd><%- Release_Date %></dd>
+
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                  展会信息
+                  <%  break; case "en": %>
+                  BOOTH
+                  <%  break; case "jp": %>
+                  ブース
+                  <% break; }%>
+              </span></dt>
+          <dd><%- Booth %></dd>
+
+          <dt><span class="spec-dl-label">
+                  <% switch(Language){
+                      case "cn": %>
+                  价格
+                  <%  break; case "en": %>
+                  PRICE
+                  <%  break; case "jp": %>
+                  価格
+                  <%  break; }%>
+              </span></dt>
+          <dd><%- Price %></dd>
+
+          <dt><span class="spec-dl-label">
+              <% switch(Language){
+              case "cn": %>
+              购买
+              <%  break; case "en": %>
+              STORE
+              <%  break; case "jp": %>
+              購入する
+              <%  break; }%>
+            </span></dt>
+            <dd>
+              <ul>
+                <% for(let i=1,id='',URL='',name='';i<3;i++){
+                  id=(Array(2).join('0') + i).slice(-2);URL='Store'+String(id)+'URL';name='Store'+String(id)+'Name';
+                  if(eval(name)==""){ break;}else{%>
+                <li>
+                  <a href="<%- eval(URL) %>"> <%- eval(name) %> </a>
+                </li>
+                <%}}%>
+              </ul>
+            </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="l-section section-bookSample">
+    <div class="l-container">
+      <header class="section-header">
+        <h2><%- Book_Sample_Heading %></h2>
+      </header>
+      <div class="bookSample-container
+      <%# 画像数によってカラム幅を変える %>
+      <%# 循环判断，如果对应的图片存在就输出。 %>
+        <% for(let i=1;i<7;i++){%>
+        <% if(eval('Book_Sample_Image_0'+String(i))!==""){%>bookSample-items<%= String(i) %><%}}%>
+      ">
+          <% for(let i=1,j=1;i<7;i++){%> <%# i用来标示画像ID，j用来计数，防止 %>
+          <% if(eval('Book_Sample_Image_0'+String(i))!==""){ j++; %>
+          <div class="bookSample-content" data-index="<%j%>">
+            <img src="<%- eval('Book_Sample_Image_0'+String(i)) %>" class="bookSample-image bookSample-image<%= String(i) %>" alt="sample-<%= String(i) %>">
+          </div>
+          <%}}%>
+      </div>
+    </div>
+  </section>
+
+<%# Lightbox用 %>
+<%# 如果主题是浅色 %>
+  <% if(theme=="light"){for(let i=1,j=1;i<7;i++){%> <%# i用来标示画像ID，j用来计数，防止 %>
+  <% if(eval('Book_Sample_Image_0'+String(i))!==""){ j++; %>
+  <div class="bookSample-lightbox" data-index="<%j%>">
+    <img src="<%- eval('Book_Sample_Image_0'+String(i)) %>" class="bookSample-lightbox-image bookSample-lightbox-image<%= String(i) %>">
+  </div>
+  <%}}}%>
+
+<section class="l-section section-buy" <% if(Store01Name==""){%> style="display: none"<%}%>>
+  <%# 无数据不显示 %>
+  <div class="l-container">
+    <header class="section-header">
+      <h2><%- Store_Buttons_Heading %></h2>
+    </header>
+    <div class="spec-buy-container">
+      <% for(let i=1,id='',URL='',name='';i<4;i++){
+        id=(Array(2).join('0') + i).slice(-2);URL='Store'+String(id)+'URL';name='Store'+String(id)+'Name';
+        if(eval(name)==""){break;}else{%>
+      <a href="<%- eval(URL) %>" class="spec-buy-button btn"><%- eval(name) %></a>
+      <%}}%>
+    </div>
+  </div>
+</section>
+
+  <section class="l-section section-tracklist">
+    <div class="l-container">
+      <header class="section-header">
+        <h2><% switch(Language){
+          case "cn": %>
+          曲目列表
+          <%  break; case "en": %>
+          TRACLIST
+          <%  break; case "jp": %>
+          トラックリスト
+          <%  break; }%></h2>
+      </header>
+      <div class="section-content">
+        <ol class="tracklist">
+          <% for(let i=1,id='',name='',descr='';i<(Total_Tracks+1);i++){
+            id=(Array(2).join('0') + i).slice(-2);
+            name='Track'+String(id)+'_Title';
+            descr='Track'+String(id)+'_Description';
+          %>
+          <%# i用来标示曲目ID，j用来计数，防止部分空%>
+          <%# javascript实现数字补全不足补零 %>
+          <%# https://blog.csdn.net/fredricen/article/details/70337921 %>
+          <% if(eval(name)!==""){ %>
+          <li class="track-container">
+            <div class="track-number"><%- eval(id) %></div>
+            <div class="track-content">
+              <span class="track-title"><%- eval(name) %></span>
+              <span class="track-meta"><%- eval(descr) %></span>
+            </div>
+          </li>
+          <%}}%>
+
+          <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+          <!--这里修改了代码以后，默认支持2位数（最大99）以内的曲目，不过在json文件里面修改Total_Tracks即可-->
+          <!--默认是10首，在此之内都是没问题的，因为如果不填数据就不会显示-->
+        </ol>
+      </div>
+    </div>
+  </section>
+
+<!--Youtube Video-->
+<section class="l-section section-youtube" <% if(Youtube_Code==""){%> style="display: none"<%}%>>
+  <div class="l-container">
+    <div class="section-content">
+      <div id="youtube-iframe" class="video-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%- Youtube_Code %>" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--NicoNico Video-->
+<section class="l-section section-nicovideo" <% if(Nicovideo_SM_number==""){%> style="display: none"<%}%>>
+  <div class="l-container">
+    <div class="section-content">
+      <div id="nicovideo-player" class="nicovideo-player">
+        <script type="application/javascript" src="https://embed.nicovideo.jp/watch/<%- Nicovideo_SM_number %>/script?w=640&h=360"></script>
+        <noscript><a href="http://www.nicovideo.jp/watch/<%- Nicovideo_SM_number %>">niconico</a></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Bilibili-->
+  <section class="l-section section-bilibili">
+    <div class="l-container">
+      <div class="section-content">
+        <div id="bilibili-iframe" class="video-wrap">
+          <iframe width="560" height="315" src="//player.bilibili.com/player.html?aid=<%- Bili_AV_number %>" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="l-section section-additionalContent">
+  <!--如果页尾任何内容都没有，视作不显示-->
+  <div class="l-container" <% if(Footer_Additional_Heading=="" && Footer_Additional_Text=="" && Footer_Additional_Image==""){%> style="display: none"<%}%>>
+      <header class="section-header" >
+        <h2><%- Footer_Additional_Heading %></h2>
+      </header>
+    <div class="section-content">
+        <p class="additionalContent-text"><%- Footer_Additional_Text %></p>
+        <div class="additionalContent-image-wrapper">
+          <img src="<%- Footer_Additional_Image %>" class="additionalContent-image" alt="Footer_Additional_Image">
+        </div>
+    </div>
+  </div>
+</section>
+
+  <section class="l-section section-credit">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>STAFF</h2>
+      </header>
+      <div class="section-content">
+        <ul class="credit">
+          <% for(let i=1,id='',name='',role='',url='';i<(Total_Staff+1);i++){
+            id=(Array(2).join('0') + i).slice(-2);
+            name='Staff'+String(id)+'_Name';
+            role='Staff'+String(id)+'_Role';
+            url='Staff'+String(id)+'_URL';
+          %>
+          <% if(eval(name)!==""){ %>
+           <li>
+            <span class="credit-role"><%- eval(role) %></span>
+            <span class="credit-title"><%- eval(name) %></span>
+            <span class="credit-website">
+              <a href="<%- eval(url) %>" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+          <%}}%>
+        <!--※スタッフ07以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+        <!--同理，这里也是多于6位作者的话，可以修改json里面的Total_Tracks数目以及数据-->
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="l-section section-banner" <% if(Banner==""){%> style="display: none"<%}%>>
+  <header class="section-header">
+    <h2>BANNER</h2>
+  </header>
+  <div class="l-container">
+    <div class="section-content">
+      <img src="<%- Banner %>">
+    </div>
+  </div>
+</section>
+
+<section class="l-section section-share" <% if(Enable_Share_Buttons!=="1"){%> style="display: none"<%}%>>
+  <div class="l-container">
+    <div class="footer-shareBtns">
+      <a href="https://twitter.com/share?text=<%- author %> - <%- Production_Title %> - <%- Circle_Name %>&url=<%- page_url %>" class="btn-tw" target="_blank">
+        <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-591 391.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.5-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 2.9 10.1 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.1 3.3-3.4z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer.php?u=<<%- page_url %>" class="btn-fb" target="_blank">
+        <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-605 417h-6v-16h-4v-5.5h4v-3.2c0-4.5 1.2-7.2 6.5-7.2h4.4v5.5h-2.8c-2.1 0-2.2.8-2.2 2.2v2.8h5l-.6 5.5h-4.4l.1 15.9z"/></svg>
+      </a>
+      <a href="http://service.weibo.com/share/share.php?url=<%- page_url %>" class="btn-fb" target="_blank"><img src="./images/social_media/weibo.png" alt="weibo" width="48" height="48" ></a>
+    </div>
+  </div>
+</section>
+
+<!-- Note: Do not delete the following section.
+ここから先のセクションは消去しないでください -->
+<footer class="l-section section-footer">
+  <div class="l-container">
+    <div class="footer-content">
+      <div class="footer-copyright">
+        <span class="footer-title">
+          <a href="<%- page_url %>">
+            <%- Production_Title %>
+          </a>
+        </span>
+        <span class="footer-copyright">
+          <%# js取前n个字符，使用.substring(start,end)方法 %>
+          <%# https://zhidao.baidu.com/question/41059794.html %>
+          ©<%- Release_Date.substring(0,4) %>
+          <a href="<%- Circle_URL %>">
+            <%- Circle_Name %>
+          </a>
+        </span>
+          <p class="footer-text" <% if(Footer_Text!=="1"){%> style="display: none"<%}%>><%- Footer_Text %></p>
+      </div>
+      <div class="footer-theme">
+        <div class="footer-theme-author">
+          <span class="footer-theme-tokusetsu3">
+            Made with
+            <a href="https://sanographix.github.io/tokusetsu3/" target="_blank">Tokusetsu 3</a>
+          </span>
+          <span class="footer-theme-">
+            Template designed by <a href="https://sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+          </span>
+          <span class="footer-theme-">
+            EJS version modified by
+            <a href="http://ryanz.cn" target="_blank">RyanPenber</a>
+          </span>
+        </div>
+        <div class="install-button">
+          <a href="https://sanographix.github.io/tokusetsu3/" class="footer-install-btn" target="_blank">Install theme / 安装模板</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<% include _footer %>

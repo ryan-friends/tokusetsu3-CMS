@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+  Theme: Tokusetsu 3
+  by @sanographix
+  https://sanographix.net
+  (c) 2016 Showkaku Sano
+  Free to use under the MIT license.
+  ——————
+  ejs template modified by RyanPenber
+  my website: http://ryanz.cn
+-->
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <!--use script to-->
+  <!--<script src="../js/import.js"></script>-->
+  <meta charset="utf-8">
+
+  <%# テーマオプション類 %>
+  <meta name="font:Title" content=""/>
+  <meta name="font:Body" content=""/>
+
+  <meta name="image:Background Image" content="<%- Background_Image %>"/>
+  <meta name="image:Header Image" content="<%- HeaderImage %>"/>
+  <meta name="image:Circle Logo" content="<%- Circle_Logo %>"/>
+  <meta name="image:Jacket" content="<%- Jacket %>"/>
+  <meta name="image:Title Logo" content="<%- Title_Logo %>"/>
+  <meta name="image:Banner" content="<%- Banner %>"/>
+  <meta name="image:Og Image" content="<%- Og_Image %>"/>
+
+  <meta name="image:02 l Introduction Heading Image" content="<%- Intro_Heading_Image %>" />
+  <meta name="image:06 l Footer Additional Image" content="<%- Footer_Image %>" />
+
+  <meta name="color:Accent" content="<%- Accent_Color %>"/>
+
+  <meta name="if:00 l Enable Dark Mode" content=""/>
+
+  <meta name="select:Header Title Logo Position" content="top" title="Top">
+  <meta name="select:Header Title Logo Position" content="middle" title="Middle">
+  <meta name="select:Header Title Logo Position" content="bottom" title="Bottom">
+
+  <meta name="select:Global Header Color" content="transparent" title="Transparent">
+  <meta name="select:Global Header Color" content="dark" title="Dark">
+  <meta name="select:Global Header Color" content="light" title="Light">
+  <meta name="select:Global Header Color" content="accent" title="Accent Color">
+
+  <meta name="if:01 l Enable Share Buttons" content="1"/>
+  <meta name="if:06 l Footer Additional Content" content="0"/> <%# 挿入されるコンテンツが画像かテキストか判別できないので手動でオンオフさせてる %>
+
+  <%# ブックモード %>
+  <meta name="text:Book Mode l Book Sample Heading" content="SAMPLE" />
+  <meta name="image:Book Mode l Sample Image 01" content=""/>
+  <meta name="image:Book Mode l Sample Image 02" content=""/>
+  <meta name="image:Book Mode l Sample Image 03" content=""/>
+  <meta name="image:Book Mode l Sample Image 04" content=""/>
+  <meta name="image:Book Mode l Sample Image 05" content=""/>
+  <meta name="image:Book Mode l Sample Image 06" content=""/>
+
+  <%# テキストエリアのオプション %>
+  <meta name="text:01 l Circle Logo Width" content="" />
+  <meta name="text:01 l Header Title Width" content="" />
+
+  <meta name="text:02 l Introduction" content="" />
+  <meta name="text:02 l Introduction Heading" content="INTRODUCTION" />
+  <meta name="text:02 l Introduction Heading Image Width" content="" />
+
+  <meta name="text:03 l Circle Name" content="" />
+  <meta name="text:03 l Circle URL" content="" />
+  <meta name="text:03 l Spec" content="" />
+  <meta name="text:03 l Release Date" content="" />
+  <meta name="text:03 l Booth Number" content="" />
+  <meta name="text:03 l Price" content="" />
+
+  <meta name="text:03 l Store01 Name" content="" />
+  <meta name="text:03 l Store01 URL" content="" />
+  <meta name="text:03 l Store02 Name" content="" />
+  <meta name="text:03 l Store02 URL" content="" />
+  <meta name="text:03 l Store03 Name" content="" />
+  <meta name="text:03 l Store03 URL" content="" />
+  <meta name="text:03 l Store Buttons Heading" content="AVAILABLE NOW" />
+
+  <meta name="text:04 l Youtube Embed Code" content="" />
+  <meta name="text:04 l Soundcloud Embed Code" content="" />
+  <meta name="text:04 l Nicovideo Embed Code" content="" />
+
+  <meta name="text:05 l Track01 Title" content="" />
+  <meta name="text:05 l Track01 Description" content="" />
+  <meta name="text:05 l Track02 Title" content="" />
+  <meta name="text:05 l Track02 Description" content="" />
+  <meta name="text:05 l Track03 Title" content="" />
+  <meta name="text:05 l Track03 Description" content="" />
+  <meta name="text:05 l Track04 Title" content="" />
+  <meta name="text:05 l Track04 Description" content="" />
+  <meta name="text:05 l Track05 Title" content="" />
+  <meta name="text:05 l Track05 Description" content="" />
+  <meta name="text:05 l Track06 Title" content="" />
+  <meta name="text:05 l Track06 Description" content="" />
+  <meta name="text:05 l Track07 Title" content="" />
+  <meta name="text:05 l Track07 Description" content="" />
+  <meta name="text:05 l Track08 Title" content="" />
+  <meta name="text:05 l Track08 Description" content="" />
+  <meta name="text:05 l Track09 Title" content="" />
+  <meta name="text:05 l Track09 Description" content="" />
+  <meta name="text:05 l Track10 Title" content="" />
+  <meta name="text:05 l Track10 Description" content="" />
+  <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
+  <meta name="text:06 l Footer Additional Heading" content="" />
+  <meta name="text:06 l Footer Additional Text" content="" />
+
+  <meta name="text:07 l Staff01 Name" content="" />
+  <meta name="text:07 l Staff01 Role" content="" />
+  <meta name="text:07 l Staff01 URL" content="" />
+  <meta name="text:07 l Staff02 Name" content="" />
+  <meta name="text:07 l Staff02 Role" content="" />
+  <meta name="text:07 l Staff02 URL" content="" />
+  <meta name="text:07 l Staff03 Name" content="" />
+  <meta name="text:07 l Staff03 Role" content="" />
+  <meta name="text:07 l Staff03 URL" content="" />
+  <meta name="text:07 l Staff04 Name" content="" />
+  <meta name="text:07 l Staff04 Role" content="" />
+  <meta name="text:07 l Staff04 URL" content="" />
+  <meta name="text:07 l Staff05 Name" content="" />
+  <meta name="text:07 l Staff05 Role" content="" />
+  <meta name="text:07 l Staff05 URL" content="" />
+  <meta name="text:07 l Staff06 Name" content="" />
+  <meta name="text:07 l Staff06 Role" content="" />
+  <meta name="text:07 l Staff06 URL" content="" />
+  <!--※スタッフ07以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
+  <meta name="text:08 l Footer Text" content="" />
+
+  <title><%- author %> - <%- Production_Title %> - <%- Circle_Name %></title>
+
+  <meta name="viewport" content="width=device-width">
+    <meta name="description" content="<%- Introduction_Text %>" />
+    <meta name="og:description" content="<%- Introduction_Text %>" />
+  <meta property="og:title" content="<%- author %> - <%- Production_Title %> - <%- Circle_Name %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="<%- Production_Title %>" />
+    <link rel="canonical" href="<%- Introduction_Text %>"/>
+    <meta property="og:url" content="<%- Introduction_Text %>" />
+    <link rel="canonical" href="<%- Introduction_Text %>"/>
+    <meta property="og:url" content="<%- Introduction_Text %>" />
+  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="<%- Introduction_Text %>">
+    <meta property="og:image" content="<%- Introduction_Text %>" />
+    <meta name="twitter:image:src" content="<%- Introduction_Text %>">
+    <meta property="og:image" content="<%- Introduction_Text %>" />
+
+
+    <link rel="stylesheet" href="./css/style-<%- theme %>.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+
+  <link rel="shortcut icon" href="<%- favicon %>">
+
+</head>
+<body class="page-<%= pageId %>"
+  <% if(Background_Image==null){ %>
+      style="background-image: url('<%- Background_Image %>');"
+        <%}%>
+>
+<style>
+  body {
+    font-family: <%- font_Body %>;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: <%- font_Title %>;
+  }
+
+  a,
+  .track-number {
+      color: <%- Accent_Color %>;
+  }
+
+  .btn {
+      color: <%- Accent_Color %>;
+      border-color: <%- Accent_Color %>;
+  }
+  .btn:hover {
+    background-color: <%- Accent_Color %>;
+  }
+
+</style>

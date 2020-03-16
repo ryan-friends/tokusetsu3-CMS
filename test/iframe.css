@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body,
+body .container {
+    height: inherit;
+    width: inherit;
+    display: flex;
+}
+body .container .navbar {
+    height: inherit;
+    flex-grow: 1;
+    background-image: linear-gradient(-14deg,
+    #a9a1b4 0%,
+    #a9a4b7 8%,
+    #a9a8ba 16%,
+    #a6cbd9 100%);
+    /*border-radius: 5px;*/
+}
+
+body .container .preview-container {
+    height: inherit;
+    flex-grow: 4;
+}
+body .container .preview-container .preview {
+    height: 100%;
+    width: 100%;
+}
