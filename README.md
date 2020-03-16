@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# tokusetsu3-ejs
+Originated form tokusetsu3 ：
+The fastest way to make doujin landing page
 
-## Available Scripts
+由sanographix老师的同人着陆页tumblr模板 tokusetsu3 制作的EJS模板。
 
-In the project directory, you can run:
+原模板按照tumblr的范式编写，只能于tumblr上使用。**即使作者开发了gh-dev**这一专用于独立静态页面的项目分支，稍大的代码量使得制作、发布到自己的服务器上仍非常不便。我便进行了彻底的ejs重新编写。
 
-### `yarn start`
+原模板使用gulp进行打包，只使用ejs合并页面的三个部分header、index、footer，本项目利用EJS的强大网页渲染功能，大家只用在site.json中填写自己网站的信息，就可编译生成自己需要的页面。
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+原tumblr项目官方介绍 / Original Project：
+- <https://sanographix.github.io/tokusetsu3/>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+我修改的EJS模板实例网页 / EJS modified page (demo):
+- <http://www.lyyousa.cn/2ndalbum>
 
-### `yarn test`
+## Feature / 特性
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 原模板需要利用tumblr的后台模板渲染机制，填写数据需要在tumblr上操作。本项目只用将自己网站的信息填入根目录的`site.json`，便可以通过gulp生成`index.ejs`到`build`目录下。将`index.ejs`修改为`index.html`即可使用。
 
-### `yarn build`
+![site.json](https://i.loli.net/2019/04/19/5cb995463af93.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 自适应列表。对应的内容如果没有，也不会影响页面生成（不过你肯定看不到对应内容啦），如果STAFF表、TRACKLIST数目过多，也会自动生成更长的列表。（虽然会影响观感）
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- 为中国大陆用于提供方便。增加了网易云音乐播放器、Bilibili播放器。分享到社交媒体图标增加新浪微博。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Set Up / 安装
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    $ npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> 注意：由于这个作品写于好几年前，目前node已经到10的版本，gulp的语法也不太一样。请按照package.json的版本要求安装。gulp版本不要超过3.9.1
+> gulp-sass请使用4.0.2版本
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> 请将图片文件按照原作者的要求修改为规定尺寸。可以先放在根目录的`images`目录里，gulp会自动进行压缩工作。
+> 请参阅文档：<https://sanographix.github.io/tokusetsu3/docs/customize.html>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Use / 使用
 
-## Learn More
+    $ gulp default
+    
+如果报错，可以只执行`gulp-ejs`，如果你修改了sass文件，那么请多执行一次`gulp-sass`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`/build` 以下に出力される / `/build` 得到的内容就是最终内容
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Develop / 开发工作 / 開発 
 
-### Code Splitting
+- gh-pages 開発時、 `gh-pages` ブランチでは作業せず `gh-pages-dev` を使うこと
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# License
 
-### Analyzing the Bundle Size
+- MIT
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# Author
 
-### Making a Progressive Web App
+## Original Author
+- [@sanographix](https://twitter.com/sanographix)
+- <http://www.sanographix.net/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Ejs Modified
+- [@RyanPenber](http://ryanz.cn)
+- <ryanz.cn>
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
