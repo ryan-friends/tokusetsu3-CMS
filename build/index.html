@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<!--
+  Theme: Tokusetsu 3
+  by @sanographix
+  https://sanographix.net
+  (c) 2016 Showkaku Sano
+  Free to use under the MIT license.
+  ——————
+  ejs template modified by RyanPenber
+  my website: http://ryanz.cn
+-->
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <!--use script to-->
+  <!--<script src="../js/import.js"></script>-->
+  <meta charset="utf-8">
+
+
+  <meta name="font:Title" content=""/>
+  <meta name="font:Body" content=""/>
+
+  <meta name="image:Background Image" content=""/>
+  <meta name="image:Header Image" content="./images/hero.jpg"/>
+  <meta name="image:Circle Logo" content="./images/circle-logo.png"/>
+  <meta name="image:Jacket" content="./images/Jacket.jpg"/>
+  <meta name="image:Title Logo" content="./images/title.png"/>
+  <meta name="image:Banner" content="./images/banner.jpg"/>
+  <meta name="image:Og Image" content="./images/ogimage.jpg"/>
+
+  <meta name="image:02 l Introduction Heading Image" content="./images/intro-heading.png" />
+  <meta name="image:06 l Footer Additional Image" content="" />
+
+  <meta name="color:Accent" content="#ed1c24"/>
+
+  <meta name="if:00 l Enable Dark Mode" content=""/>
+
+  <meta name="select:Header Title Logo Position" content="top" title="Top">
+  <meta name="select:Header Title Logo Position" content="middle" title="Middle">
+  <meta name="select:Header Title Logo Position" content="bottom" title="Bottom">
+
+  <meta name="select:Global Header Color" content="transparent" title="Transparent">
+  <meta name="select:Global Header Color" content="dark" title="Dark">
+  <meta name="select:Global Header Color" content="light" title="Light">
+  <meta name="select:Global Header Color" content="accent" title="Accent Color">
+
+  <meta name="if:01 l Enable Share Buttons" content="1"/>
+  <meta name="if:06 l Footer Additional Content" content="0"/>
+
+
+  <meta name="text:Book Mode l Book Sample Heading" content="SAMPLE" />
+  <meta name="image:Book Mode l Sample Image 01" content=""/>
+  <meta name="image:Book Mode l Sample Image 02" content=""/>
+  <meta name="image:Book Mode l Sample Image 03" content=""/>
+  <meta name="image:Book Mode l Sample Image 04" content=""/>
+  <meta name="image:Book Mode l Sample Image 05" content=""/>
+  <meta name="image:Book Mode l Sample Image 06" content=""/>
+
+
+  <meta name="text:01 l Circle Logo Width" content="" />
+  <meta name="text:01 l Header Title Width" content="" />
+
+  <meta name="text:02 l Introduction" content="" />
+  <meta name="text:02 l Introduction Heading" content="INTRODUCTION" />
+  <meta name="text:02 l Introduction Heading Image Width" content="" />
+
+  <meta name="text:03 l Circle Name" content="" />
+  <meta name="text:03 l Circle URL" content="" />
+  <meta name="text:03 l Spec" content="" />
+  <meta name="text:03 l Release Date" content="" />
+  <meta name="text:03 l Booth Number" content="" />
+  <meta name="text:03 l Price" content="" />
+
+  <meta name="text:03 l Store01 Name" content="" />
+  <meta name="text:03 l Store01 URL" content="" />
+  <meta name="text:03 l Store02 Name" content="" />
+  <meta name="text:03 l Store02 URL" content="" />
+  <meta name="text:03 l Store03 Name" content="" />
+  <meta name="text:03 l Store03 URL" content="" />
+  <meta name="text:03 l Store Buttons Heading" content="AVAILABLE NOW" />
+
+  <meta name="text:04 l Youtube Embed Code" content="" />
+  <meta name="text:04 l Soundcloud Embed Code" content="" />
+  <meta name="text:04 l Nicovideo Embed Code" content="" />
+
+  <meta name="text:05 l Track01 Title" content="" />
+  <meta name="text:05 l Track01 Description" content="" />
+  <meta name="text:05 l Track02 Title" content="" />
+  <meta name="text:05 l Track02 Description" content="" />
+  <meta name="text:05 l Track03 Title" content="" />
+  <meta name="text:05 l Track03 Description" content="" />
+  <meta name="text:05 l Track04 Title" content="" />
+  <meta name="text:05 l Track04 Description" content="" />
+  <meta name="text:05 l Track05 Title" content="" />
+  <meta name="text:05 l Track05 Description" content="" />
+  <meta name="text:05 l Track06 Title" content="" />
+  <meta name="text:05 l Track06 Description" content="" />
+  <meta name="text:05 l Track07 Title" content="" />
+  <meta name="text:05 l Track07 Description" content="" />
+  <meta name="text:05 l Track08 Title" content="" />
+  <meta name="text:05 l Track08 Description" content="" />
+  <meta name="text:05 l Track09 Title" content="" />
+  <meta name="text:05 l Track09 Description" content="" />
+  <meta name="text:05 l Track10 Title" content="" />
+  <meta name="text:05 l Track10 Description" content="" />
+  <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
+  <meta name="text:06 l Footer Additional Heading" content="" />
+  <meta name="text:06 l Footer Additional Text" content="" />
+
+  <meta name="text:07 l Staff01 Name" content="" />
+  <meta name="text:07 l Staff01 Role" content="" />
+  <meta name="text:07 l Staff01 URL" content="" />
+  <meta name="text:07 l Staff02 Name" content="" />
+  <meta name="text:07 l Staff02 Role" content="" />
+  <meta name="text:07 l Staff02 URL" content="" />
+  <meta name="text:07 l Staff03 Name" content="" />
+  <meta name="text:07 l Staff03 Role" content="" />
+  <meta name="text:07 l Staff03 URL" content="" />
+  <meta name="text:07 l Staff04 Name" content="" />
+  <meta name="text:07 l Staff04 Role" content="" />
+  <meta name="text:07 l Staff04 URL" content="" />
+  <meta name="text:07 l Staff05 Name" content="" />
+  <meta name="text:07 l Staff05 Role" content="" />
+  <meta name="text:07 l Staff05 URL" content="" />
+  <meta name="text:07 l Staff06 Name" content="" />
+  <meta name="text:07 l Staff06 Role" content="" />
+  <meta name="text:07 l Staff06 URL" content="" />
+  <!--※スタッフ07以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
+  <meta name="text:08 l Footer Text" content="" />
+
+  <title>泠鸢yousa - 黑色诗集 - 泠鸢yousa</title>
+
+  <meta name="viewport" content="width=device-width">
+    <meta name="description" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+    <meta name="og:description" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+  <meta property="og:title" content="泠鸢yousa - 黑色诗集 - 泠鸢yousa" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="黑色诗集" />
+    <link rel="canonical" href="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开"/>
+    <meta property="og:url" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+    <link rel="canonical" href="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开"/>
+    <meta property="og:url" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+  <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开">
+    <meta property="og:image" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+    <meta name="twitter:image:src" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开">
+    <meta property="og:image" content="这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开" />
+
+
+    <link rel="stylesheet" href="css/style-dark.css" />
+
+  <link rel="shortcut icon" href="images/backup_images/favicon.png">
+
+</head>
+<body class="page-index"
+
+>
+<style>
+  body {
+    font-family: "Helvetica Neue","Source Han Sans","PingFang SC","Microsoft Yahei",Helvetica, Arial, sans-serif;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Helvetica Neue","Source Han Sans","PingFang SC","Microsoft Yahei",Helvetica, Arial, sans-serif;
+  }
+
+  a,
+  .track-number {
+      color: #ed1c24;
+  }
+
+  .btn {
+      color: #ed1c24;
+      border-color: #ed1c24;
+  }
+  .btn:hover {
+    background-color: #ed1c24;
+  }
+
+</style>
+
+
+<div class="globalHeader
+  is-transparent">
+  <div class="l-container">
+    <div class="globalHeader-inner">
+      <div class="globalHeader-labelName" style="width:100%">
+        <div href="https://weibo.com/lingyuanyousa">
+          <div >
+            <img class="labelName-logoImg" src="images/backup_images/circle-logo.png" alt="泠鸢yousa"> </div>
+          <div  style="display: none">泠鸢yousa</div>
+      </div>
+        <div class="globalHeader-shareBtns" style="margin-left: auto;">
+          <a href="https://twitter.com/share?text=泠鸢yousa - 黑色诗集 - 泠鸢yousa&url=http://www.lyyousa.cn/secondalbum" class="btn-tw" target="_blank">
+            <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-591 391.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.5-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 2.9 10.1 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.1 3.3-3.4z"/></svg>
+          </a>
+          <a href="http://www.facebook.com/sharer.php?u=http://www.lyyousa.cn/secondalbum" class="btn-fb" target="_blank">
+            <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-605 417h-6v-16h-4v-5.5h4v-3.2c0-4.5 1.2-7.2 6.5-7.2h4.4v5.5h-2.8c-2.1 0-2.2.8-2.2 2.2v2.8h5l-.6 5.5h-4.4l.1 15.9z"/></svg>
+          </a>
+          <a href="http://service.weibo.com/share/share.php?url=http://www.lyyousa.cn/secondalbum" class="btn-fb" target="_blank"><img src="images/social_media/weibo.png" alt="weibo" width="42" height="42"></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="heroHeader">
+  <div class="heroHeader-inner
+  is-position-bottom
+  has-headerImage
+  " style="background-image: url('images/backup_images/hero.jpg');">
+    <header class="header">
+      <div class="l-container" >
+        <h1>
+            <img class="header-logo" src="images/backup_images/title.png" alt="黑色诗集">
+        </h1>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+<section class="l-section section-introduction" >
+  <div class="l-container">
+      <header class="section-header">
+        <h2>
+            <img class="introduction-heading-image" src="images/backup_images/intro-heading.png" alt="INTRODUCTION" style=" width: 543px;">
+
+          <div  style="display: none">
+            INTRODUCTION
+          </div>
+        </h2>
+      </header>
+
+    <div class="section-content" >
+      <p>
+        这里是介绍文字，专辑好听又漂亮，快来买呀<br>这是第二行文字，中间用回车分开
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!--用网易云是因为虾米播播太旧了...-->
+  <section class="l-section section-netease" >
+    <div class="l-container">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=150 src="//music.163.com/outchain/player?type=2&id=430062882&auto=0"></iframe>
+    </div>
+  </section>
+
+  <!--soundcloud-->
+  <!--soundcloud需要自己手动获取嵌入式代码里面的歌曲ID-->
+  <section class="l-section section-soundcloud" >
+    <div class="l-container">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F598948320&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+    </div>
+  </section>
+
+
+<section class="l-section section-spec">
+  <div class="l-container">
+    <div class="l-row">
+      <div class="l-span5">
+          <img src="./images/Jacket.jpg" alt="黑色诗集" class="jacket-image" >
+          <div class="jacket-noimage"  style="display: none">
+
+              作品印刷中~
+
+          </div>
+      </div>
+      <div class="l-span7">
+        <dl class="spec-dl">
+          <dt><span class="spec-dl-label">
+
+                          作品标题
+
+              </span></dt>
+          <dd>黑色诗集</dd>
+
+          <dt><span class="spec-dl-label">
+
+                  社团/作者
+
+              </span></dt>
+          <dd><a href="https://weibo.com/lingyuanyousa">泠鸢yousa</a></dd>
+
+          <dt><span class="spec-dl-label">
+
+                  规格
+
+              </span></dt>
+          <dd>Spec</dd>
+
+          <dt><span class="spec-dl-label">
+
+                  发行时间
+
+              </span></dt>
+          <dd>2019/07/01</dd>
+
+          <dt><span class="spec-dl-label">
+
+                  展会信息
+
+              </span></dt>
+          <dd>成都CP19</dd>
+
+          <dt><span class="spec-dl-label">
+
+                  价格
+
+              </span></dt>
+          <dd>99 RMB</dd>
+
+          <dt><span class="spec-dl-label">
+
+              购买
+
+            </span></dt>
+            <dd>
+              <ul>
+
+                <li>
+                  <a href="http://www.modian.com"> 摩点网 </a>
+                </li>
+
+              </ul>
+            </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="l-section section-bookSample">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>实物样张</h2>
+      </header>
+      <div class="bookSample-container
+
+
+
+        bookSample-items1
+        bookSample-items2
+        bookSample-items3
+
+
+
+      ">
+
+
+          <div class="bookSample-content" data-index="">
+            <img src="images/backup_images/1.png" class="bookSample-image bookSample-image1">
+          </div>
+
+
+          <div class="bookSample-content" data-index="">
+            <img src="images/backup_images/2.jpg" class="bookSample-image bookSample-image2">
+          </div>
+
+
+          <div class="bookSample-content" data-index="">
+            <img src="images/backup_images/3.png" class="bookSample-image bookSample-image3">
+          </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<section class="l-section section-buy" >
+
+  <div class="l-container">
+    <header class="section-header">
+      <h2>AVAILABLE NOW</h2>
+    </header>
+    <div class="spec-buy-container">
+
+      <a href="http://www.modian.com" class="spec-buy-button btn">摩点网</a>
+
+    </div>
+  </div>
+</section>
+
+  <section class="l-section section-tracklist">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>
+          曲目列表
+          </h2>
+      </header>
+      <div class="section-content">
+        <ol class="tracklist">
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目1</span>
+              <span class="track-meta">ft.初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目2</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目3</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目4</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目5</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目6</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目7</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目8</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目9</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+
+
+
+          <li class="track-container">
+            <div class="track-number"></div>
+            <div class="track-content">
+              <span class="track-title">曲目10</span>
+              <span class="track-meta">初音未来</span>
+            </div>
+          </li>
+
+
+          <!--※トラック11以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+          <!--这里修改了代码以后，默认支持2位数（最大99）以内的曲目，不过在json文件里面修改Total_Tracks即可-->
+          <!--默认是10首，在此之内都是没问题的，因为如果不填数据就不会显示-->
+        </ol>
+      </div>
+    </div>
+  </section>
+
+<!--Youtube Video-->
+<section class="l-section section-youtube" >
+  <div class="l-container">
+    <div class="section-content">
+      <div id="youtube-iframe" class="video-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XgyKbPy1RsQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--NicoNico Video-->
+<section class="l-section section-nicovideo" >
+  <div class="l-container">
+    <div class="section-content">
+      <div id="nicovideo-player" class="nicovideo-player">
+        <script type="application/javascript" src="https://embed.nicovideo.jp/watch/666/script?w=640&h=360"></script>
+        <noscript><a href="http://www.nicovideo.jp/watch/666">niconico</a></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Bilibili-->
+  <section class="l-section section-bilibili">
+    <div class="l-container">
+      <div class="section-content">
+        <div id="bilibili-iframe" class="video-wrap">
+          <iframe width="560" height="315" src="//player.bilibili.com/player.html?aid=5784107" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="l-section section-additionalContent">
+  <!--如果页尾任何内容都没有，视作不显示-->
+  <div class="l-container" >
+      <header class="section-header" >
+        <h2>页末额外内容</h2>
+      </header>
+    <div class="section-content">
+        <p class="additionalContent-text">很长很多的额外介绍写在这里</p>
+        <div class="additionalContent-image-wrapper">
+          <img src="" class="additionalContent-image" alt="Footer_Additional_Image">
+        </div>
+    </div>
+  </div>
+</section>
+
+  <section class="l-section section-credit">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>STAFF</h2>
+      </header>
+      <div class="section-content">
+        <ul class="credit">
+
+
+           <li>
+            <span class="credit-role">主催</span>
+            <span class="credit-title">作者1</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+
+           <li>
+            <span class="credit-role">歌者</span>
+            <span class="credit-title">作者2</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+
+           <li>
+            <span class="credit-role">画师</span>
+            <span class="credit-title">作者3</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+
+           <li>
+            <span class="credit-role">混音</span>
+            <span class="credit-title">作者4</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+
+           <li>
+            <span class="credit-role">监督</span>
+            <span class="credit-title">作者5</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+
+           <li>
+            <span class="credit-role">设计</span>
+            <span class="credit-title">作者6</span>
+            <span class="credit-website">
+              <a href="http://www.baidu.com" class="credit-website-link btn">Website</a>
+            </span>
+          </li>
+
+        <!--※スタッフ07以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+        <!--同理，这里也是多于6位作者的话，可以修改json里面的Total_Tracks数目以及数据-->
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="l-section section-banner" >
+  <header class="section-header">
+    <h2>BANNER</h2>
+  </header>
+  <div class="l-container">
+    <div class="section-content">
+      <img src="images/backup_images/banner.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="l-section section-share" >
+  <div class="l-container">
+    <div class="footer-shareBtns">
+      <a href="https://twitter.com/share?text=泠鸢yousa - 黑色诗集 - 泠鸢yousa&url=http://www.lyyousa.cn/secondalbum" class="btn-tw" target="_blank">
+        <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-591 391.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.5-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 2.9 10.1 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.1 3.3-3.4z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer.php?u=<http://www.lyyousa.cn/secondalbum" class="btn-fb" target="_blank">
+        <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-605 417h-6v-16h-4v-5.5h4v-3.2c0-4.5 1.2-7.2 6.5-7.2h4.4v5.5h-2.8c-2.1 0-2.2.8-2.2 2.2v2.8h5l-.6 5.5h-4.4l.1 15.9z"/></svg>
+      </a>
+      <a href="http://service.weibo.com/share/share.php?url=http://www.lyyousa.cn/secondalbum" class="btn-fb" target="_blank"><img src="images/social_media/weibo.png" alt="weibo" width="48" height="48" ></a>
+    </div>
+  </div>
+</section>
+
+<!-- Note: Do not delete the following section.
+ここから先のセクションは消去しないでください -->
+<footer class="l-section section-footer">
+  <div class="l-container">
+    <div class="footer-content">
+      <div class="footer-copyright">
+        <span class="footer-title">
+          <a href="http://www.lyyousa.cn/secondalbum">
+            黑色诗集
+          </a>
+        </span>
+        <span class="footer-copyright">
+
+
+          ©2019
+          <a href="https://weibo.com/lingyuanyousa">
+            泠鸢yousa
+          </a>
+        </span>
+          <p class="footer-text"  style="display: none">这里可以在页末放一些字体</p>
+      </div>
+      <div class="footer-theme">
+        <div class="footer-theme-author">
+          <span class="footer-theme-tokusetsu3">
+            Made with
+            <a href="https://sanographix.github.io/tokusetsu3/" target="_blank">Tokusetsu 3</a>
+          </span>
+          <span class="footer-theme-">
+            Template designed by <a href="https://sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+          </span>
+          <span class="footer-theme-">
+            EJS version modified by
+            <a href="http://ryanz.cn" target="_blank">RyanPenber</a>
+          </span>
+        </div>
+        <div class="install-button">
+          <a href="https://sanographix.github.io/tokusetsu3/" class="footer-install-btn" target="_blank">Install theme / 安装模板</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../js/scripts-core.js"></script>
+</body>
+</html>
+

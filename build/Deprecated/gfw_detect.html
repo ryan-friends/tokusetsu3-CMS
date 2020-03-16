@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--作GFW判断，如果用户在墙内，默认提供Bilibili源-->
+<script type="text/javascript">
+    /*
+    * 作者：lepture
+    * 链接：https://juejin.im/post/58edfdb544d904005776688d
+    */
+    var flag;
+    function isInChina() {
+        var url = '//graph.facebook.com/feed?callback=h';
+        var xhr = new XMLHttpRequest();
+        var called = false;
+        xhr.open('GET', url);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                called = true;
+                flag = false;
+            }
+        };
+        xhr.send();
+        // timeout 1s, this facebook API is very fast.
+        setTimeout(function() {
+            if (!called) {
+                xhr.abort();
+                flag = true;
+            }
+        }, 1000);
+    }
+    if(!flag){
+        document.getElementById("youtube").style.display="none";
+    }else {
+        document.getElementById("bilibili").style.display="none";
+    }
+</script>
+<!--Youtube Video-->
+<div id="youtube" class="l-container">
+    <div class="section-content">
+        <div id="youtube-iframe" class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XgyKbPy1RsQ" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>
