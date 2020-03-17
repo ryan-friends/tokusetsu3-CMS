@@ -19,6 +19,7 @@
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "ejs": "^3.0.1",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.2.0",
     "eslint-loader": "3.0.3",
@@ -150,10 +151,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-ejs": "^3.3.0",
     "gulp-imagemin": "^3.0.3",
-    "imagemin-pngquant": "^5.0.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "imagemin-pngquant": "^5.0.0"
   }
 }
